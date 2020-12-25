@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="elements">
+        <bean class="ru.specialist.dbala.model.Circle"
+              p:x="22.22"
+              p:y="44.44"
+              p:radius="60"/>
+        <bean class="ru.specialist.dbala.model.Circle"
+              p:x="111.11"
+              p:y="1.1"
+              p:radius="1"/>
+        <bean class="ru.specialist.dbala.model.Point"
+              p:x="999.22"
+              p:y="999.44"/>
+    </util:list>
+
+    <bean id="myPoint"
+          class="ru.specialist.dbala.model.Point"
+          p:x="22.22"
+          p:y="44.44"/>
+
+    <bean id="myCircle"
+          class="ru.specialist.dbala.model.Circle"
+          p:x="22.22"
+          p:y="44.44"
+          p:radius="60"/>
+
+    <bean id="myScene"
+          class="ru.specialist.dbala.model.Scene"
+          p:color="GREEN"
+          p:elements-ref="elements"/>
+</beans>
